@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Учебник</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: white; /* цвет фона за картинкой */
+    }
+
+    /* Фон с полной картинкой */
+    .hero {
+        background: url('2.png') no-repeat center center;
+        background-size: contain; /* показываем всю картинку */
+        background-color: white; /* цвет фона вокруг */
+        height: 100vh; /* 100% высоты окна */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* кнопка внизу */
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    /* Кнопка */
+    .btn {
+        background: #ff9800;
+        color: white;
+        padding: 15px 40px;
+        font-size: 1.4em;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .btn:hover {
+        background: #e68900;
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <button class="btn" onclick="openBook()">Открыть учебник</button>
+</div>
+
+<script>
+    function openBook() {
+        // Открыть в новой вкладке
+        window.location.href = "uchebnik.html";
+        // Если учебник в папке:
+        // window.open("uchebnik/index.html", "_blank");
+    }
+</script>
+
+</body>
+</html>
